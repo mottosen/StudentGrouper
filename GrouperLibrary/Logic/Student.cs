@@ -8,6 +8,7 @@ namespace GrouperLibrary
         private int[] formAnswers;
         private string[] positives;
         private string[] negatives;
+        private bool intro;
 
         public string Name
         {
@@ -19,7 +20,12 @@ namespace GrouperLibrary
             get {return formAnswers;}
         }
 
-        public Student(string name, int priority, int[] answers, string[] positives, string[] negatives)
+        public bool Intro
+        {
+            get {return intro;}
+        }
+
+        public Student(string name, int priority, int[] answers, string[] positives, string[] negatives, bool intro)
         {
             // The input is tested for mistakes
             if (priority < 0 || priority > 5)
@@ -46,12 +52,15 @@ namespace GrouperLibrary
             }
 
             // We create the student instance using the given
-            // input tested before
+            // input tested before. The attribute 'intro' is
+            // an indicator for whether or not the student has
+            // attended the intro week.
             this.name = name;
             answers[priority] *= 2; // The prioritized answer is given a greater weight
             this.formAnswers = answers;
             this.positives = positives;
             this.negatives = negatives;
+            this.intro = intro;
         }
 
         public int GetBonus(string s)

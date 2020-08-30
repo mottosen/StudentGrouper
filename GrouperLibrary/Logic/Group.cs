@@ -37,6 +37,10 @@ namespace GrouperLibrary
             score += StudentCompare(s1, s3);
             score += StudentCompare(s2, s3);
 
+            // The group gets a better score if alle students
+            // in the group attended the intro week.
+            if (s1.Intro && s2.Intro && s3.Intro) score -= 10;
+
             // The total score of the group is returned. The
             // higher the score the worse the group is. The
             // score can be negative which means the group is
