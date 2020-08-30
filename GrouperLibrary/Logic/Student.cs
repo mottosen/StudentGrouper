@@ -19,7 +19,7 @@ namespace GrouperLibrary
             get {return formAnswers;}
         }
 
-        public Student(string name, int priority, int[] answers, string positives, string negatives)
+        public Student(string name, int priority, int[] answers, string[] positives, string[] negatives)
         {
             if (priority < 0 || priority > 5)
             {
@@ -41,8 +41,8 @@ namespace GrouperLibrary
         {
             int res = 0;
 
-            if (positives.Contains(s)) res -= 10;
-            if (negatives.Contains(s)) res += 10;
+            if (Array.Exists(positives, elm => elm.Equals(s))) res -= 10;
+            if (Array.Exists(negatives, elm => elm.Equals(s))) res += 10;
 
             return res;
         }

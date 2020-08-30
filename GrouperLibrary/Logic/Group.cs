@@ -47,6 +47,9 @@ namespace GrouperLibrary
                 res += AbsDiff(arr1[i], arr2[i]);
             }
 
+            res += s1.GetBonus(s2.Name);
+            res += s2.GetBonus(s1.Name);
+
             return res;
         }
 

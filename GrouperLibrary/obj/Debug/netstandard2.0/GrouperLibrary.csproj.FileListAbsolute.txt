@@ -1,9 +1,0 @@
-/home/k/Documents/studentGrouper/GrouperLibrary/obj/Debug/netstandard2.0/GrouperLibrary.csprojAssemblyReference.cache
-/home/k/Documents/studentGrouper/GrouperLibrary/obj/Debug/netstandard2.0/GrouperLibrary.AssemblyInfoInputs.cache
-/home/k/Documents/studentGrouper/GrouperLibrary/obj/Debug/netstandard2.0/GrouperLibrary.AssemblyInfo.cs
-/home/k/Documents/studentGrouper/GrouperLibrary/obj/Debug/netstandard2.0/GrouperLibrary.csproj.CoreCompileInputs.cache
-/home/k/Documents/studentGrouper/GrouperLibrary/bin/Debug/netstandard2.0/GrouperLibrary.deps.json
-/home/k/Documents/studentGrouper/GrouperLibrary/bin/Debug/netstandard2.0/GrouperLibrary.dll
-/home/k/Documents/studentGrouper/GrouperLibrary/bin/Debug/netstandard2.0/GrouperLibrary.pdb
-/home/k/Documents/studentGrouper/GrouperLibrary/obj/Debug/netstandard2.0/GrouperLibrary.dll
-/home/k/Documents/studentGrouper/GrouperLibrary/obj/Debug/netstandard2.0/GrouperLibrary.pdb
