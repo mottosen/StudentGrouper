@@ -20,6 +20,8 @@ namespace GrouperLibrary
 
         public Group(Student s1, Student s2, Student s3)
         {
+            // When we create an instance of a group the
+            // score is automatically calculated.
             this.score = GetScore(s1, s2, s3);
             this.students = new Student[] {s1,s2,s3};
         }
@@ -28,10 +30,17 @@ namespace GrouperLibrary
         {
             int score = 0;
 
+            // The group is scored by matching the different
+            // combinations of students to check how each pair
+            // matches eachother.
             score += StudentCompare(s1, s2);
             score += StudentCompare(s1, s3);
             score += StudentCompare(s2, s3);
 
+            // The total score of the group is returned. The
+            // higher the score the worse the group is. The
+            // score can be negative which means the group is
+            // very good.
             return score;
         }
 
@@ -42,11 +51,16 @@ namespace GrouperLibrary
             int[] arr1 = s1.Answers;
             int[] arr2 = s2.Answers;
 
+            // Two students are first matched based on their
+            // answers to the survey.
             for (int i = 0; i < 6; i++)
             {
                 res += AbsDiff(arr1[i], arr2[i]);
             }
 
+            // Next the students are matched by looking at
+            // each of their white and black lists to check
+            // for their preferences.
             res += s1.GetBonus(s2.Name);
             res += s2.GetBonus(s1.Name);
 
