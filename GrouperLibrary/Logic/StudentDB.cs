@@ -21,7 +21,7 @@ namespace GrouperLibrary
                     1,
                     new int[] {1,2,3,4,5,4},
                     new string[] {},
-                    new string[] {"test1","test3"},
+                    new string[] {},
                     true),
 
                 new Student(

@@ -5,6 +5,7 @@ namespace GrouperLibrary
     public class Student
     {
         private string name;
+        private int priority;
         private int[] formAnswers;
         private string[] positives;
         private string[] negatives;
@@ -52,15 +53,13 @@ namespace GrouperLibrary
             }
 
             // We create the student instance using the given
-            // input tested before. The attribute 'intro' is
-            // an indicator for whether or not the student has
-            // attended the intro week.
+            // input tested before.
             this.name = name;
-            answers[priority] *= 2; // The prioritized answer is given a greater weight
+            this.priority = priority; // Most important answer
             this.formAnswers = answers;
             this.positives = positives;
             this.negatives = negatives;
-            this.intro = intro;
+            this.intro = intro; // Did the student attend the intro week
         }
 
         public int GetBonus(string s)
@@ -78,6 +77,11 @@ namespace GrouperLibrary
             if (Array.Exists(negatives, elm => elm.Equals(s))) res += 10;
 
             return res;
+        }
+
+        public bool IsPriority(int n)
+        {
+            return this.priority == n;
         }
 
         public override string ToString()

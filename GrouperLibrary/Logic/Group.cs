@@ -59,7 +59,14 @@ namespace GrouperLibrary
             // answers to the survey.
             for (int i = 0; i < 6; i++)
             {
-                res += AbsDiff(arr1[i], arr2[i]);
+                int diff = AbsDiff(arr1[i], arr2[i]);
+
+                if (s1.IsPriority(i) || s2.IsPriority(i))
+                {
+                    diff *= 2;
+                }
+
+                res += diff;
             }
 
             // Next the students are matched by looking at
